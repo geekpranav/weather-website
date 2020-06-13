@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 const publicdirpath = path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
 const partialspath = path.join(__dirname,'../templates/partials')
@@ -92,6 +93,6 @@ app.get('*',(req,res)=>{
     res.render('error')
 
 })
-app.listen(3000,()=>{
-    console.log('MR.JARVIS THE SERVER IS UP AND RUNNING')
+app.listen(port,()=>{
+    console.log('MR.JARVIS THE SERVER IS UP AND RUNNING' + port)
 })
