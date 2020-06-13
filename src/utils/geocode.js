@@ -22,12 +22,6 @@ const geocode = (address,callback)=>{
     })
 
 }
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: lat, lng: long },
-    zoom: 8
-  });
-}
+
 
 module.exports=geocode
